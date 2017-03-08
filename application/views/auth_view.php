@@ -1,7 +1,7 @@
 <h1></h1>
 
 <form action="Auth" method="post">
-	<input type="text" name="username">
-	<input type="password" name="password">
-	<input type="submit" value="go">
+	<input type="text" name="username" placeholder="username"></br>
+	<input type="password" name="password" placeholder="password"></br>
+	<input type="submit" value="AUTH">
 </form>

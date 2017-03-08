@@ -14,10 +14,10 @@
 
 		if(isset($_COOKIE['logged']))
 		{
-			echo "<li>Hello ".$_COOKIE['logged']."</li>";
+			echo "<li>Hello ".$_COOKIE['logged']."<form action='Auth' method='post'><input type='submit' name='quit' value='quit'></input></form></li>";
 		}else
 		{
-			echo "<li><a href='../../auth'>Логин</a> или <a href='../../auth'>Регистрация</a></li>  ";
+			echo "<li><a href='../../auth'>Логин</a> или <a href='../../registration'>Регистрация</a></li>  ";
 		}
 		?>
 	</ol>

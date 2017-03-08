@@ -10,7 +10,7 @@ class Model_Auth extends Model
 		if(!empty($_POST['username']) && !empty($_POST['password']))
 		{
 			$username = $_POST['username'];
-			$password = $_POST['password'];
+			$password = md5($_POST['password']);
 
 			include_once("application/core/database.php");
 			
@@ -28,6 +28,13 @@ class Model_Auth extends Model
 				echo "Не верно!";
 			}
 			
+		}
+
+		if(!empty($_POST['quit']))
+		{
+			
+			setcookie('logged', $_COOKIE['logged'], 1);
+			header('Location: main');
 		}
 	}
 }

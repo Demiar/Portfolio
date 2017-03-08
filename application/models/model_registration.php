@@ -15,12 +15,11 @@ class Model_Registration extends Model
 
 			include_once("application/core/database.php");
 			
-			$stmt = $pdo->query("INSERT INTO `Users` WHERE `username` = '$username', `password` = '$password', `email` = '$email'");
+			$stmt = $pdo->query("INSERT INTO `Users` (`username`, `password`, `email`) VALUES ('$username', '$password', '$email')");
 
             if($stmt)
             {
-              return $data = "Вы успешно зарегестрировались!";
-              setcookie("logged", "$username", time()+3600);
+              echo "Вы успешно зарегистрировались!";
             }			
 		}
 	}

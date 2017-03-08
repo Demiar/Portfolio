@@ -7,11 +7,11 @@ class Controller_Registration extends Controller
 	
 	function __construct()
 	{
-		$this->model = new Model_Auth();
+		$this->model = new Model_Registration();
 		$this->view = new View();
 	}
 
-	function action_save()
+	function action_index()
 	{
 
 		$data = $this->model->save_data();
